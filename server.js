@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 const userroute = require('./routes/user');
-
+const { connectdb } = require("./db/dbconnect");
+connectdb();
 app.use(express.json());
 app.use(userroute)
 // app.post('/',(req, res, next) => {
