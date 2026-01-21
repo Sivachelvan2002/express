@@ -9,6 +9,9 @@ const userschema=new mongoose.Schema({
     email:{
         type:String,
         required:true
-    }})
+    },
+    address:String,
+    telephone:Number
+})
 
 exports.usermodel=mongoose.model('User',userschema);
